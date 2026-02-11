@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+body {
+	background-color: #222222;
+	color: #F3F3F3;
+}
+
+.card {
+	@apply bg-[#474747] border border-[#11B7FF] rounded-xl shadow-md p-6;
+}
+
+.badge {
+	@apply inline-block px-4 py-1 bg-[#BBFF00] text-[#222222] rounded-full font-semibold;
+}
+
+
+@keyframes bouncing-ball {
+	0%{
+		transform: translateX(-400%);
+	}
+	25% {
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateX(2000%);
+	}
+	75% {
+		transform: translateY(600%);
+	}
+	100%{
+		transform: translateX(-400%);
+	}
+}
+
+.home-Box{
+	position: relative;
+	z-index: 1;
+}
+
+.tennis-ball {
+	animation: bouncing-ball 4s linear infinite;
+	position: absolute;
+	top:15%;
+	left: 0;
+	width: 5%;
+	z-index: 0;
+}
+
+
+
+
