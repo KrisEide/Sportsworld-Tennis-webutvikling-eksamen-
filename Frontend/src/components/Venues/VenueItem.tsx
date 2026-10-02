@@ -5,12 +5,15 @@ interface VenueItemProps {
   onDelete?: () => void; //optional callback fra parent
 }
 
-const VenueItem = ({ venue, onDelete }: /*{ venue: IVenue })*/ VenueItemProps) => {
+const VenueItem = ({
+  venue,
+  onDelete,
+}: /*{ venue: IVenue })*/ VenueItemProps) => {
   return (
     <article className="card mt-8 border text-left mb-20">
       <img
         className="w-full rounded-lg mb-2 h-48 object-cover"
-        src={`http://localhost:5285/images/${venue.image}`}
+        src={`https://sportsworld-tennis-webutvikling-eksamen.onrender.com/images/${venue.image}`}
         alt={`Bilde av ${venue.name}`}
       />
       <h3 className="text-lg font-bold">{venue.name}</h3>
