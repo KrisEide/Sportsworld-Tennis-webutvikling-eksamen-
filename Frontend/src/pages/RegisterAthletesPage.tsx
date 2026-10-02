@@ -2,7 +2,7 @@ import AthleteAdd from "../components/Athletes/AthleteAdd";
 
 const RegistrerAthletesPage = () => {
   return (
-    <section className="max-w-3xl mx-auto mt-12 text-center">
+    <section className="max-w-3xl mx-auto my-8 sm:my-12 px-4 text-center">
       <h1 className="text-3xl font-bold mb-4">Register Athletes</h1>
       <p className="text-lg mb-9">Here you can register new athletes</p>
       <AthleteAdd />

@@ -2,7 +2,7 @@ import axios from "axios";
 import type { IFinanceResponse } from "../interfaces/ResponseInterfaces";
 
 const epoint =
-  "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/api/Athletes";
+  "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/api/finance";
 
 //henter penger fra db
 const getMoney = async (): Promise<IFinanceResponse> => {

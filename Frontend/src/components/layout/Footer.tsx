@@ -7,7 +7,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-r from-[#063A7F] to-[#11B7FF] py-8 px-4 h-[300px] flex items-center justify-between text-[#BBFF00]">
+    <footer className="w-full bg-gradient-to-r from-[#063A7F] to-[#11B7FF] py-8 px-4 md:min-h-[300px] flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left text-[#BBFF00]">
       <section>
         <ul>
           <h3 className="font-bold tracking-wide">Partners</h3>

@@ -7,14 +7,14 @@ const Header = () => {
 	const location = useLocation();
 
   return (
-    <header className="w-full bg-gradient-to-r from-[#063A7F] to-[#11B7FF] py-8 px-4 flex items-center justify-between">
+    <header className="w-full bg-gradient-to-r from-[#063A7F] to-[#11B7FF] py-5 lg:py-8 px-4 flex flex-col lg:flex-row items-center justify-between gap-4">
       {/* LOGO */}
       <Link to="/" className="text-2xl font-bold tracking-wide text-[#BBFF00]">
         SportsWorld 🎾
       </Link>
 
       {/* NAV MENU */}
-      <ul className="flex items-center gap-6 font-bold text-[#BBFF00]">
+      <ul className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 lg:gap-6 font-bold text-[#BBFF00] [&_li]:whitespace-nowrap [&_a]:inline-block [&_a]:py-2 lg:[&_a]:py-0">
         <li className="text-lg  hover:text-[#DAFFA2]">
           {location.pathname === "/Athletes" && "🎾"}
           <Link to="/Athletes">Athletes</Link>
@@ -54,4 +54,3 @@ const Header = () => {
 }; 
 
 export default Header;
-

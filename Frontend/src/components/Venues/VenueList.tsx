@@ -43,7 +43,7 @@ const VenueList = () => {
           onChange={(e) =>
             sortByCapacity(e.target.value as "default" | "asc" | "desc")
           }
-          className="ml-8 border border-gray-300 rounded px-2 py-1 w-60 focus:outline-none focus:ring-2 focus:ring-[#BBFF00]"
+          className="ml-4 sm:ml-8 border border-gray-300 rounded px-2 py-1 w-60 focus:outline-none focus:ring-2 focus:ring-[#BBFF00]"
         >
           <option value="default">Default</option>
           <option value="asc">Ascending 🔼</option>
@@ -52,10 +52,10 @@ const VenueList = () => {
       </section>
 
       <section>
-        <p className="ml-8">Total venues: {getVenueQuantity()}</p>
+        <p className="ml-4 sm:ml-8">Total venues: {getVenueQuantity()}</p>
       </section>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 px-8">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 px-4 sm:px-8">
         {sortedVenues.map((venue, index) => (
           <VenueItem key={"venue" + index} venue={venue} />
         ))}

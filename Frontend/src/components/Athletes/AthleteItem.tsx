@@ -22,17 +22,17 @@ const AthleteItem = ({ athlete, isLeftColumn }: AthleteItemData) => {
 
   //Hvor redigeringsviduet skal ligge.
   //Her har vi en utfordring: Hvordan skal dette håndteres på mobil skjer? Da er det ikke plass til redigeringsboks ut til venstre eller høyre.
-  // Vi må indikere at dette bare skal skje på store skjermer(ikke mobil) med "md" som er medium.
+  // Redigering vises ved siden av kortet bare når skjermen har plass på begge sider.
 
   const editWindowposition = isLeftColumn
-    ? "md:right-full md:mr-4"
-    : "md:left-full md:ml-4";
+    ? "2xl:right-full 2xl:mr-4"
+    : "2xl:left-full 2xl:ml-4";
 
   let editWindow = null;
 
   if (showEditWindow) {
     editWindow = (
-      <div className={"md:absolute md:top-0 " + editWindowposition}>
+      <div className={"2xl:absolute 2xl:top-0 2xl:w-80 " + editWindowposition}>
         <AthleteEdit
           athlete={athlete}
           onClose={() => setshowEditWindow(false)} // lukker vinduet
@@ -115,7 +115,7 @@ const AthleteItem = ({ athlete, isLeftColumn }: AthleteItemData) => {
           <div className="absolute top-2 right-2 flex gap-2">
             <button
               onClick={() => setshowEditWindow(true)}
-              className="bg transparent border border-white text-white text-xs px-3 py-1 rounded cursor-pointer
+              className="bg transparent border border-white text-white text-sm px-3 py-2 sm:text-xs sm:py-1 rounded cursor-pointer
               hover:bg-gradient-to-r
               hover:from-[#063A7F]
               hover:to-[#11B7FF]
@@ -127,7 +127,7 @@ const AthleteItem = ({ athlete, isLeftColumn }: AthleteItemData) => {
             </button>
             <button
               onClick={deleteClick}
-              className="bg transparent border border-white text-white text-xs px-3 py-1 rounded cursor-pointer
+              className="bg transparent border border-white text-white text-sm px-3 py-2 sm:text-xs sm:py-1 rounded cursor-pointer
               hover:bg-gradient-to-r
               hover:from-[#7F0606]
               hover:to-[#FF4D4D]

@@ -96,42 +96,42 @@ const AthleteAdd = () => {
     <section className="border p-5 bg-gradient-to-r from-[#063A7F] to-[#11B7FF]">
       {/* NAVN */}
       <div className="mb-3">
-        <label>Name</label>
+        <label className="block mb-1 sm:inline sm:mb-0">Name</label>
         <input
-          className="border bg-white text-black ml-3"
+          className="border bg-white text-black w-full min-w-0 py-2 sm:w-auto sm:py-0 sm:ml-3"
           ref={nameInput}
           type="text"
         />
       </div>
       {/* PRIS */}
       <div>
-        <label>Price</label>
+        <label className="block mb-1 sm:inline sm:mb-0">Price</label>
         <input
-          className="border bg-white text-black ml-5"
+          className="border bg-white text-black w-full min-w-0 py-2 sm:w-auto sm:py-0 sm:ml-5"
           ref={priceInput}
           type="number"
         />
       </div>
       {/* GENDER */}
-      <div className="p-3">
-        <label>Name</label>
-        <select className="border bg-white text-black ml-4" ref={genderSelect}>
+      <div className="py-3 sm:p-3">
+        <label className="block mb-1 sm:inline sm:mb-0">Name</label>
+        <select className="border bg-white text-black w-full min-w-0 max-w-full py-2 sm:w-auto sm:py-0 sm:ml-4" ref={genderSelect}>
           <option value="Female">Female</option>
           <option value="Male">Male</option>
         </select>
       </div>
       {/* Bilde */}
       <div className="mb-2">
-        <label>Upload Image</label>
+        <label className="block mb-1 sm:inline sm:mb-0">Upload Image</label>
         <input
-          className="border bg-white text-black ml-4"
+          className="border bg-white text-black w-full min-w-0 max-w-full py-2 sm:w-auto sm:py-0 sm:ml-4"
           type="file"
           onChange={handleImageChangeAdd}
         />
       </div>
       {/* Knapp */}
       <div className="mt-2 flex gap-2">
-        <button onClick={saveNewAthlete} className="border px-2">
+        <button onClick={saveNewAthlete} className="border px-4 py-2 sm:px-2 sm:py-0">
           Save
         </button>
       </div>

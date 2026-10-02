@@ -105,9 +105,9 @@ const AthleteEdit = ({ athlete, onClose }: AthleteEditInput) => {
       <h3>Edit Athlete</h3>
       <div className="mb-3 mt-3">
         {/* NAVN */}
-        <label>Name</label>
+        <label className="block mb-1 sm:inline sm:mb-0">Name</label>
         <input
-          className="border bg-white text-black ml-3"
+          className="border bg-white text-black w-full min-w-0 py-2 sm:w-auto sm:py-0 sm:ml-3"
           ref={nameInput}
           type="text"
         />
@@ -116,9 +116,9 @@ const AthleteEdit = ({ athlete, onClose }: AthleteEditInput) => {
       {/* PRIS */}
 
       <div>
-        <label>Price</label>
+        <label className="block mb-1 sm:inline sm:mb-0">Price</label>
         <input
-          className="border bg-white text-black ml-5"
+          className="border bg-white text-black w-full min-w-0 py-2 sm:w-auto sm:py-0 sm:ml-5"
           ref={priceInput}
           type="number"
         />
@@ -126,9 +126,9 @@ const AthleteEdit = ({ athlete, onClose }: AthleteEditInput) => {
 
       {/* Gender */}
 
-      <div className="p-3">
-        <label className="">Gender:</label>
-        <select className="border bg-white text-black ml-4" ref={genderSelect}>
+      <div className="py-3 sm:p-3">
+        <label className="block mb-1 sm:inline sm:mb-0">Gender:</label>
+        <select className="border bg-white text-black w-full min-w-0 max-w-full py-2 sm:w-auto sm:py-0 sm:ml-4" ref={genderSelect}>
           <option value="Female">Female</option>
           <option value="Male">Male</option>
         </select>
@@ -137,9 +137,9 @@ const AthleteEdit = ({ athlete, onClose }: AthleteEditInput) => {
       {/* Bilde */}
 
       <div className="mb-4">
-        <label>Upload new image</label>
+        <label className="block mb-1 sm:inline sm:mb-0">Upload new image</label>
         <input
-          className="border bg-white text-black"
+          className="border bg-white text-black w-full min-w-0 max-w-full py-2 sm:py-0"
           ref={imageInput}
           type="file"
           onChange={handleImageChange}
@@ -148,10 +148,10 @@ const AthleteEdit = ({ athlete, onClose }: AthleteEditInput) => {
 
       {/* LAGRE OG AVBRYT KNAPP*/}
       <div className="mt-2 flex gap-2">
-        <button onClick={savingNewInfo} className="border px-2">
+        <button onClick={savingNewInfo} className="border px-4 py-2 sm:px-2 sm:py-0">
           Save
         </button>
-        <button onClick={onClose} className="border px-2">
+        <button onClick={onClose} className="border px-4 py-2 sm:px-2 sm:py-0">
           Cancel
         </button>
       </div>

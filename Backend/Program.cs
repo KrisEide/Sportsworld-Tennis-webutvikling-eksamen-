@@ -33,6 +33,9 @@ builder.Services.AddControllers();
 //4) OpenAPI
 builder.Services.AddOpenApi();
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5285";
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+
 var app = builder.Build();
 
 app.UseDefaultFiles(); //launcher stylet web-api ved oppstart

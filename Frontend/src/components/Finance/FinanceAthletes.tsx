@@ -30,7 +30,7 @@ function FinanceAthletes() {
           .map((a) => (
             <div
               key={a.id}
-              className="border border-[#68b8ce] p-4 w-[200px] h-[340px] rounded-lg shadow-sm flex flex-col"
+              className="border border-[#68b8ce] p-4 w-full max-w-xs sm:max-w-[200px] min-h-[340px] rounded-lg shadow-sm flex flex-col"
             >
               <img
                 src={`https://sportsworld-tennis-webutvikling-eksamen.onrender.com/images/${a.image}`}

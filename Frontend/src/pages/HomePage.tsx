@@ -1,7 +1,7 @@
 const HomePage = () => {
   return (
  <div 
-  className="min-h-screen bg-cover bg-no-repeat flex items-center justify-center relative overflow-hidden"
+  className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative overflow-hidden px-4 py-12"
   style={{ backgroundImage: "url('/t.jpg.webp')" }}
 >
   
@@ -17,11 +17,11 @@ const HomePage = () => {
       p-6 
       shadow-lg 
       text-white 
-      w-130
+      w-full max-w-130
       text-center
     "
   >
-    <div className="relative w-full h-[150px]">
+    <div className="relative w-full">
       <h3 className="text-2xl font-bold">Welcome to sportsworld!</h3>
       <p className="text-lg py-5">
         Please navigate to one of our pages to perform your task

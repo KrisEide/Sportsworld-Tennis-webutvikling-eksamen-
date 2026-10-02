@@ -76,14 +76,14 @@ const ManageVenueItem = () => {
   };
 
   return (
-    <section className="max-w-md bg-[#474747] border border-[#11B7FF] rounded-xl shadow-md p-6">
+    <section className="w-full min-w-0 max-w-md bg-[#474747] border border-[#11B7FF] rounded-xl shadow-md p-4 sm:p-6">
       <h3 className="text-2xl font-bold text-center m-4">Edit venue</h3>
 
-      <div className="m-4">
-        <div className="flex gap-2">
+      <div className="my-4 sm:m-4">
+        <div className="flex flex-col sm:flex-row gap-2">
           <input
             ref={idInput}
-            className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#BBFF00]"
+            className="min-w-0 w-full flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#BBFF00]"
             type="number"
             placeholder=" ID..."
           />
@@ -96,22 +96,22 @@ const ManageVenueItem = () => {
         </div>
       </div>
 
-      <div className="m-4">
-        <div className="flex gap-2">
+      <div className="my-4 sm:m-4">
+        <div className="flex flex-col sm:flex-row gap-2">
           <input
             ref={nameInput}
             placeholder=" Name..."
-            className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#BBFF00]"
+            className="min-w-0 w-full flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#BBFF00]"
             type="text"
           />
         </div>
       </div>
 
-      <div className="m-4">
-        <div className="flex gap-2">
+      <div className="my-4 sm:m-4">
+        <div className="flex flex-col sm:flex-row gap-2">
           <input
             ref={capacityInput}
-            className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#BBFF00]"
+            className="min-w-0 w-full flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#BBFF00]"
             type="number"
             placeholder=" Capacity..."
           />
