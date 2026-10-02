@@ -10,7 +10,9 @@ interface AthleteItemData {
 }
 
 const AthleteItem = ({ athlete, isLeftColumn }: AthleteItemData) => {
-  const imageUrl = "http://localhost:5285/images/" + athlete.image;
+  const imageUrl =
+    "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/images/" +
+    athlete.image;
 
   //state for å vise redigeringsboksen eller ikke.
   const [showEditWindow, setshowEditWindow] = useState<boolean>(false);
