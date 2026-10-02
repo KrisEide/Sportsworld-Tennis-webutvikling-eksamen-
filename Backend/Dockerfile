@@ -10,7 +10,10 @@ WORKDIR /app
 
 COPY --from=build /app/publish .
 
-ENV ASPNETCORE_URLS=http://0.0.0.0:${PORT}
-EXPOSE 10000
+RUN mkdir -p /app/Database
+
+COPY Database/SW.db /app/Database/SW.db
+
+RUN chmod -R 777 /app/Database
 
 ENTRYPOINT ["dotnet", "Backend.dll"]
