@@ -10,7 +10,7 @@ import type {
 } from "../interfaces/ResponseInterfaces";
 
 const endpoint =
-  "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/images/";
+  "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/api/Athletes";
 const imageUploadEndPoint =
   "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/api/ImageUploadAthlete";
 

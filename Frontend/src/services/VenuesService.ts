@@ -1,7 +1,8 @@
 import axios from "axios";
 import { type IVenue } from "../interfaces/IVenue";
 
-const endpoint = "https://sportsworld-tennis-webutvikling-eksamen.onrender.com";
+const endpoint =
+  "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/api/venue";
 const endpointImgUpload =
   "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/api/venue/imgupload";
 
