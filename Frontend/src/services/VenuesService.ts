@@ -78,7 +78,8 @@ interface IDefaultResponse {
 
 const putVenue = async (editedVenue: IVenue): Promise<IDefaultResponse> => {
   try {
-    const response = await axios.put(endpoint, editedVenue);
+    await axios.put(endpoint, editedVenue);
+
     return {
       success: true,
     };
