@@ -9,8 +9,10 @@ import type {
   IDefaultResponse,
 } from "../interfaces/ResponseInterfaces";
 
-const endpoint = "http://localhost:5285/api/Athletes";
-const imageUploadEndPoint = "http://localhost:5285/api/ImageUploadAthlete";
+const endpoint =
+  "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/images/";
+const imageUploadEndPoint =
+  "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/api/ImageUploadAthlete";
 
 //Hent alle athletes
 export const getAthletes = async (): Promise<IAthleteListResponse> => {
@@ -37,7 +39,7 @@ export const getAthletes = async (): Promise<IAthleteListResponse> => {
 //POST - Legge til ny Athlete
 
 const postAthlete = async (
-  athlete: IAthlete
+  athlete: IAthlete,
 ): Promise<IAthleteSingleResponse> => {
   try {
     const response = await axios.post<IAthlete>(endpoint, athlete);
@@ -75,7 +77,7 @@ const registerAthlete = async (id: number): Promise<IAthleteSingleResponse> => {
 
 // Redigere
 const putAthletes = async (
-  editedAthlete: IAthlete
+  editedAthlete: IAthlete,
 ): Promise<IDefaultResponse> => {
   try {
     await axios.put(endpoint, editedAthlete);

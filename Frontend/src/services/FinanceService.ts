@@ -1,7 +1,8 @@
 import axios from "axios";
 import type { IFinanceResponse } from "../interfaces/ResponseInterfaces";
 
-const epoint = "http://localhost:5285/api/finance";
+const epoint =
+  "https://sportsworld-tennis-webutvikling-eksamen.onrender.com/api/Athletes";
 
 //henter penger fra db
 const getMoney = async (): Promise<IFinanceResponse> => {
@@ -19,7 +20,6 @@ const getMoney = async (): Promise<IFinanceResponse> => {
   }
 };
 
-
 // sender lånebeløp til backend og får oppdatert Finance tilbake
 const takeLoan = async (amount: number): Promise<IFinanceResponse> => {
   try {
@@ -27,25 +27,6 @@ const takeLoan = async (amount: number): Promise<IFinanceResponse> => {
     return {
       success: true,
       data: response.data,
-    };
-  } catch{
-    return {
-      success: false,
-      data: null,
-    };
-  }
-};
-
-
-
-//oppdater values
-const purchaseAthlete = async (athleteId: number) => {
-  try {
-    const response = await axios.put(`${epoint}/purchase/${athleteId}`);
-
-    return {
-      success: true,
-      data: response.data
     };
   } catch {
     return {
@@ -55,9 +36,25 @@ const purchaseAthlete = async (athleteId: number) => {
   }
 };
 
+//oppdater values
+const purchaseAthlete = async (athleteId: number) => {
+  try {
+    const response = await axios.put(`${epoint}/purchase/${athleteId}`);
+
+    return {
+      success: true,
+      data: response.data,
+    };
+  } catch {
+    return {
+      success: false,
+      data: null,
+    };
+  }
+};
 
 export default {
   getMoney,
   takeLoan,
-  purchaseAthlete
+  purchaseAthlete,
 };
